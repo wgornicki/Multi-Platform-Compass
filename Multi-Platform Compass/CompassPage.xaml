@@ -2,12 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Multi_Platform_Compass.CompassPage">
-    
-    <AbsoluteLayout HorizontalOptions="Center">
-        <StackLayout>
-            <Image x:Name="needleImage" Source="compass_needle.png" HorizontalOptions="Center"/>
+
+    <AbsoluteLayout x:Name="absolute" HorizontalOptions="Center">
+        <StackLayout x:Name="needle">
+
+            <ContentView x:Name="needleContentView" BackgroundColor="Aqua">
+
+                <ContentView.GestureRecognizers>
+
+                    <PointerGestureRecognizer 
+                        PointerMoved="OnPointerMoved"
+                        PointerEntered="OnPointerEnter"
+                        PointerExited="OnPointerExit"/>
+                    
+                </ContentView.GestureRecognizers>
+                
+                <Image x:Name="needleImage" Source="compass_needle.png" HorizontalOptions="Center"/>
+                
+            </ContentView>
+            <Label HorizontalOptions="Center" x:Name="CompassLabel" Text="CompassFeedHere">
+                
+            </Label>
         </StackLayout>
+        
     </AbsoluteLayout>
-
-
+    
 </ContentPage>
