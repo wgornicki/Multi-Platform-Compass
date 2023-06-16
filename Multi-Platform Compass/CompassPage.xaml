@@ -6,7 +6,7 @@
     <AbsoluteLayout x:Name="absolute" HorizontalOptions="Center">
         <StackLayout x:Name="needle">
 
-            <ContentView x:Name="needleContentView" BackgroundColor="Aqua">
+            <ContentView x:Name="needleContentView" BackgroundColor="AntiqueWhite">
 
                 <ContentView.GestureRecognizers>
 
