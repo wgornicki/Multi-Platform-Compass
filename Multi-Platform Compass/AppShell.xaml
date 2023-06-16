@@ -6,9 +6,16 @@
     xmlns:local="clr-namespace:Multi_Platform_Compass"
     Shell.FlyoutBehavior="Disabled">
 
+    <FlyoutItem
+        Title="Home"
+        FlyoutDisplayOptions="AsSingleItem">
     <ShellContent
         Title="Compass"
         ContentTemplate="{DataTemplate local:CompassPage}"
         Route="CompassPage" />
-
+    <ShellContent 
+        Title="Map" 
+        ContentTemplate="{DataTemplate local:MapPage}"
+        Route="MapPage"/>
+    </FlyoutItem>
 </Shell>

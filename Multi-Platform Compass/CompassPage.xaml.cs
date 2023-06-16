@@ -9,7 +9,7 @@ public partial class CompassPage : ContentPage
 
 	public CompassPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
         ToggleCompass();
     }
 
@@ -56,19 +56,19 @@ public partial class CompassPage : ContentPage
             if (!Compass.Default.IsMonitoring)
             {
                 // Turn on compass
-                Compass.Default.ReadingChanged += Compass_ReadingChanged;
+                Compass.Default.ReadingChanged += CompassReadingChanged;
                 Compass.Default.Start(SensorSpeed.UI, applyLowPassFilter: true);
             }
             else
             {
                 // Turn off compass
                 Compass.Default.Stop();
-                Compass.Default.ReadingChanged -= Compass_ReadingChanged;
+                Compass.Default.ReadingChanged -= CompassReadingChanged;
             }
         }
     }
 
-    private void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
+    private void CompassReadingChanged(object sender, CompassChangedEventArgs e)
     {
         if (!pointerActive)
         {

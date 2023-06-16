@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Multi-Platform Compass/Platforms/Android/AndroidManifest.xml
+/Multi-Platform Compass/Platforms/Android/AndroidManifest.xml
